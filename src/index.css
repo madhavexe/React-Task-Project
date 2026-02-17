@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+*{
+    color: white;
+}
+
+#tasklist::-webkit-scrollbar{
+display: none;
+}
