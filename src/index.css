@@ -1,9 +1,28 @@
 @import "tailwindcss";
 
-*{
+* {
     color: white;
 }
 
-#tasklist::-webkit-scrollbar{
-display: none;
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+#form {
+    input{
+        padding: .4rem .7rem;
+        border: 1px solid #808080;
+        width: 100%;
+        margin-top: 8px;
+        border-radius: 5px;
+    }
+
+    textarea {
+        border: 1px solid #808080;
+        margin-top: 8px;
+        border-radius: 5px;
+        padding: .4rem .7rem;
+
+    }
+
 }
