@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = ({handleLogin}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const submitHandle = (e)=>{
         e.preventDefault()
+        handleLogin(email,password)
         setEmail('')
         setPassword('')
     }
@@ -22,7 +23,7 @@ const Login = () => {
                     <input className='border-2 bg-transparent border-blue-400 text-xl rounded-full px-5 py-3 mt-4 placeholder:text-gray-400 text-white outline-none' placeholder='Enter your password' type="password" value={password} onChange={(e)=>{
                         setPassword(e.target.value)
                     }} />
-                    <button className='px-6 py-2 text-lg text-white bg-blue-400 outline-none rounded-full mt-6'>Log In</button>
+                    <button className='px-6 py-2 text-lg text-white bg-blue-400 outline-none rounded-full mt-6 cursor-pointer'>Log In</button>
                 </form>
             </div>
         </div>
