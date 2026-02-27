@@ -1,10 +1,17 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
 import { AuthContext } from './context/AuthProvider'
+import { getLocalStorage, setLocalStorage } from './utils/LocalStorage'
 
 const App = () => {
+
+  useEffect(() => {
+    setLocalStorage()
+    getLocalStorage()
+  },)
+  
 
   const [user, setUser] = useState(null)
 
